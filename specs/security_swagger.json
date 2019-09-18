@@ -1,0 +1,116 @@
+{
+  "info": {
+    "title": "SecurityPOC",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/v1/Roles": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "Provide generic roles for a new employee",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "parameters": []
+      },
+      "post": {
+        "tags": [
+          "Roles"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/v1/Roles/{id}": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "operationId": "Get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Roles"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "type": "integer"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Roles"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "swagger": "2.0",
+  "x-components": {}
+}
