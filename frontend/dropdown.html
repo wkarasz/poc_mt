@@ -4,8 +4,13 @@
 	<title>TIBCO Demo</title>
 </head>
 <body>
-  <h1>Facilities</h1>
-  <select id="facilities"></select>
+  <h1>New Employee Submission Form</h1>
+  <form action="https://integration.cloud.tibcoapps.com/yodlvgs3tdyilxqdvp4mlpukxu5qiahh/newemployee" method="get">
+    <p>First Name: <input name="firstname" type="text"></p>
+    <p>Last Name: <input name="lastname" type="text"></p>
+    <p>Facility: <select name="facilities" id="facilities"></select></p>
+    <p><input type="submit" value="Submit"></p>
+  </form>
 </body>
 <script src="fetch2.js"></script>
 </html>

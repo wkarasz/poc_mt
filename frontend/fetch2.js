@@ -20,8 +20,8 @@ fetch(url)
 	let authors = data.results;
 	return authors.map(function(author) {
 	  let li = createNode('option');
-	  li.setAttribute("value",`${author.name.first} ${author.name.last}`);
-	  li.innerHTML = `${author.name.first} ${author.name.last}`;
+	  li.setAttribute("value",`${author.location.street}`);
+	  li.innerHTML = `${author.location.street}`;
 	  append(ul, li);
 	})
 })
